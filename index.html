@@ -1,33 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="../vue.js"></script>
-    <script src="../sdk.js" defer></script>
-    <script src="../vue.js" defer></script>
-    <script type="module" src="app.js"></script>
+    <script src="./sdk.js" defer></script>
   </head>
+
   <body>
-    <!-- <section id="app">
-      <ul>
-        <li v-for="(value,key) in options">
-          <input
-            type="checkbox"
-            v-model="value"
-            :name="key"
-            :id="key"
-            @click="toggle(key)"
-          />  
-          <label :for="key">{{key}}</label>
-        </li>
-      </ul>
-      <button @click="saveMeta">Save</button>
-    </section> -->
+    <h2>Click the button</h2>
     <script>
-      // window.parent.location.replace("https://www.google.com");
+      ZFAPPS.extension.init().then(async (App) => {
+        console.log(App);
+        console.log(this.retrieveMeta());
+      });
     </script>
   </body>
 </html>
